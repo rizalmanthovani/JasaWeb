@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   ZAL DIGITAL PRODUCTION — GLOBAL STYLES
+   ============================================================ */
+
+:root {
+  --bg-primary: #2a2a2a;
+  --bg-secondary: #1e1e1e;
+  --bg-card: #333333;
+  --gold: #C9A84C;
+  --gold-light: #E8C96B;
+  --gold-dark: #A8893C;
+  --text-primary: #FFFFFF;
+  --text-secondary: #BBBBBB;
+  --text-muted: #777777;
+  --border: rgba(201, 168, 76, 0.2);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-gold: 0 0 30px rgba(201, 168, 76, 0.15);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   SCROLLBAR CUSTOM
+   ============================================================ */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* ============================================================
+   SELECTION
+   ============================================================ */
+::selection {
+  background: rgba(201, 168, 76, 0.3);
+  color: var(--text-primary);
+}
+
+/* ============================================================
+   GOLD DIVIDER
+   ============================================================ */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 24px auto;
+  border: none;
+}
+
+/* ============================================================
+   NOISE TEXTURE OVERLAY
+   ============================================================ */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================================
+   BADGE COMPONENT
+   ============================================================ */
+.badge-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(201, 168, 76, 0.12);
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  color: var(--gold);
+  border-radius: 99px;
+  padding: 5px 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   CURSOR BLINK
+   ============================================================ */
+.cursor-blink {
+  display: inline-block;
+  width: 3px;
+  height: 0.9em;
+  background: var(--gold);
+  margin-left: 4px;
+  vertical-align: baseline;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ============================================================
+   HERO RADIAL GLOW
+   ============================================================ */
+.hero-glow {
+  background: radial-gradient(ellipse 80% 50% at 50% 40%, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+}
+
+/* ============================================================
+   PROCESS CONNECTOR LINE
+   ============================================================ */
+.process-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  opacity: 0.4;
+  margin-top: -28px;
+}
+
+/* ============================================================
+   FLOATING WA BUTTON PULSE
+   ============================================================ */
+@keyframes wa-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+.wa-pulse {
+  animation: wa-pulse 2.5s ease-out infinite;
+}
+
+/* ============================================================
+   NAV ACTIVE UNDERLINE
+   ============================================================ */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+.nav-link.active::after,
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ============================================================
+   PARTICLES CANVAS
+   ============================================================ */
+#particles-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================================
+   TESTIMONIAL CARD SCROLL
+   ============================================================ */
+.testimonials-track {
+  scrollbar-width: none;
+}
+.testimonials-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================================================
+   FAQ ACCORDION
+   ============================================================ */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.faq-content.open {
+  max-height: 500px;
+}
+
+/* ============================================================
+   PRICING CARD ACCENT TOP LINE
+   ============================================================ */
+.card-accent-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 12px 12px 0 0;
+}
+
+/* ============================================================
+   NICHE FILTER SCROLL
+   ============================================================ */
+.niche-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.niche-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================================================
+   STAR RATING
+   ============================================================ */
+.star-filled { color: var(--gold); }
+.star-empty { color: #444; }
+
+/* ============================================================
+   PORTFOLIO CARD OVERLAY
+   ============================================================ */
+.portfolio-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.group:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* ============================================================
+   SECTION SPACING
+   ============================================================ */
+.section-padding {
+  padding: 96px 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 64px 0;
+  }
+}
