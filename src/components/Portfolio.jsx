@@ -66,9 +66,9 @@ function PortfolioCard({ item, index }) {
         {/* Live Website Screenshot */}
         <div className="absolute inset-0 w-full h-full">
           <img 
-            src={`https://image.thum.io/get/width/600/crop/800/${item.link}`} 
+            src={item.image} 
             alt={`Screenshot of ${item.title}`}
-            className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+            className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 transition-opacity duration-500"
             loading="lazy"
           />
           {/* Subtle gradient overlay to ensure text/icons remain readable */}

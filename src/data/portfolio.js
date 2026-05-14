@@ -11,6 +11,7 @@ export const PORTFOLIO_ITEMS = [
     icon: '✂️',
     stats: '3 hari',
     link: 'http://ryx9e9sveipqjaayo5di5pip.43.133.145.170.sslip.io',
+    image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop',
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ export const PORTFOLIO_ITEMS = [
     icon: '☕',
     stats: '5 hari',
     link: 'https://websenja-saji.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=600&auto=format&fit=crop',
   },
   {
     id: 3,
@@ -35,6 +37,7 @@ export const PORTFOLIO_ITEMS = [
     icon: '💅',
     stats: '4 hari',
     link: 'https://demo.zaldigital.com/aura-beauty',
+    image: 'https://images.unsplash.com/photo-1521590832167-7bfcfaa6362f?q=80&w=600&auto=format&fit=crop',
   },
   {
     id: 4,
@@ -47,6 +50,7 @@ export const PORTFOLIO_ITEMS = [
     icon: '👕',
     stats: '4 hari',
     link: 'https://demo.zaldigital.com/bersih-laundry',
+    image: 'https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=600&auto=format&fit=crop',
   },
   {
     id: 5,
@@ -59,6 +63,7 @@ export const PORTFOLIO_ITEMS = [
     icon: '🔧',
     stats: '3 hari',
     link: 'https://demo.zaldigital.com/auto-pro',
+    image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?q=80&w=600&auto=format&fit=crop',
   },
   {
     id: 6,
@@ -71,5 +76,6 @@ export const PORTFOLIO_ITEMS = [
     icon: '🏥',
     stats: '7 hari',
     link: 'https://demo.zaldigital.com/klinik-sehat',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600&auto=format&fit=crop',
   },
 ];
