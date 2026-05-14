@@ -63,22 +63,16 @@ function PortfolioCard({ item, index }) {
           }}
         />
 
-        {/* Browser mockup */}
-        <div className="relative z-10 w-36 h-24 rounded-lg border border-[rgba(255,255,255,0.15)] bg-[#111] shadow-xl group-hover:scale-105 transition-transform duration-500">
-          {/* Browser bar */}
-          <div className="h-5 rounded-t-lg bg-[#1a1a1a] flex items-center gap-1.5 px-2 border-b border-[rgba(255,255,255,0.08)]">
-            <div className="w-1.5 h-1.5 rounded-full bg-red-500/60" />
-            <div className="w-1.5 h-1.5 rounded-full bg-yellow-500/60" />
-            <div className="w-1.5 h-1.5 rounded-full bg-green-500/60" />
-            <div className="flex-1 mx-2 h-2 rounded bg-[rgba(255,255,255,0.06)]" />
-          </div>
-          {/* Screen content simulation */}
-          <div className="p-2 space-y-1">
-            <div className="h-1.5 rounded w-full" style={{ background: `${item.accentColor}40` }} />
-            <div className="h-1 rounded w-4/5 bg-[rgba(255,255,255,0.1)]" />
-            <div className="h-1 rounded w-3/5 bg-[rgba(255,255,255,0.06)]" />
-            <div className="mt-2 h-4 rounded-sm w-16" style={{ background: `${item.accentColor}50` }} />
-          </div>
+        {/* Live Website Screenshot */}
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src={`https://image.thum.io/get/width/600/crop/800/${item.link}`} 
+            alt={`Screenshot of ${item.title}`}
+            className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+            loading="lazy"
+          />
+          {/* Subtle gradient overlay to ensure text/icons remain readable */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[rgba(10,10,10,0.5)]" />
         </div>
 
         {/* Icon */}
