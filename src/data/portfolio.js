@@ -15,7 +15,7 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 2,
-    title: 'Kopi Nusantara',
+    title: 'Cafe Senja & Saji',
     niche: 'Cafe & Resto',
     desc: 'Website cafe estetik dengan menu digital dan fitur reservasi meja online.',
     tags: ['Menu Digital', 'Reservasi'],
