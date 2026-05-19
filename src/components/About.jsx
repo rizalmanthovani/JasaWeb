@@ -38,12 +38,12 @@ export default function About() {
               
               {/* Logo Container */}
               <div className="relative bg-[#1a1a1a] p-2 md:p-3 rounded-2xl border border-[rgba(255,255,255,0.05)] shadow-2xl transform transition-transform duration-500 hover:scale-105 animate-float">
-                <Image 
+                <img 
                   src="/logo.jpg" 
-                  alt="Zal Digital Logo" 
-                  width={256}
-                  height={256}
+                  alt="Logo Zal Digital Production - Jasa Pembuatan Website Profesional" 
+                  title="Zal Digital Production"
                   className="w-48 md:w-64 h-auto max-h-[300px] object-contain rounded-xl"
+                  loading="lazy"
                 />
               </div>
             </div>

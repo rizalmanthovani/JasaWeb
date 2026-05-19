@@ -69,7 +69,7 @@ export default function Navbar() {
             className="flex items-center gap-3 group"
           >
             <div className="relative">
-              <Image src="/logo.jpg" alt="Zal Digital Logo" width={40} height={40} className="w-10 h-10 object-cover rounded-md" />
+              <img src="/logo.jpg" alt="Zal Digital Production - Web Design & Development" title="Zal Digital Production" className="h-12 w-auto max-w-[140px] object-contain rounded-md" />
               <div className="absolute inset-0 rounded-md bg-gold/10 blur-md group-hover:blur-xl transition-all duration-300 -z-10" />
             </div>
             <div className="leading-tight">

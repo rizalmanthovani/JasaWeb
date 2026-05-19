@@ -34,7 +34,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <div className="relative">
-                <Image src="/logo.jpg" alt="Zal Digital Logo" width={40} height={40} className="w-10 h-10 object-cover rounded-md" />
+                <img src="/logo.jpg" alt="Zal Digital Production - Web Design & Development" title="Zal Digital Production" className="h-12 w-auto max-w-[140px] object-contain rounded-md" />
               </div>
               <div>
                 <div className="font-heading font-bold text-white text-sm">Zal Digital</div>
