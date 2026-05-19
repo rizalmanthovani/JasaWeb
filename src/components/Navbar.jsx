@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const WA_LINK = 'https://wa.me/6287836993805';
 
@@ -58,26 +60,34 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <button
-            onClick={() => handleNavClick('#home')}
+          <Link
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick('#home');
+            }}
             className="flex items-center gap-3 group"
           >
             <div className="relative">
-              <img src="/logo.jpg" alt="Zal Digital Logo" className="w-10 h-10 object-cover rounded-md" />
+              <Image src="/logo.jpg" alt="Zal Digital Logo" width={40} height={40} className="w-10 h-10 object-cover rounded-md" />
               <div className="absolute inset-0 rounded-md bg-gold/10 blur-md group-hover:blur-xl transition-all duration-300 -z-10" />
             </div>
             <div className="leading-tight">
               <div className="font-heading font-bold text-white text-sm tracking-tight">Zal Digital</div>
               <div className="font-heading font-light text-[#C9A84C] text-[10px] tracking-[0.2em] uppercase">Production</div>
             </div>
-          </button>
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
-              <button
+              <Link
                 key={link.href}
-                onClick={() => handleNavClick(link.href)}
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(link.href);
+                }}
                 className={`nav-link font-body text-sm font-medium transition-colors duration-300 ${
                   isActive(link.href)
                     ? 'text-[#C9A84C] active'
@@ -85,7 +95,7 @@ export default function Navbar() {
                 }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
           </div>
 
@@ -129,16 +139,20 @@ export default function Navbar() {
 
         <nav className="flex flex-col items-center gap-8">
           {NAV_LINKS.map((link, i) => (
-            <button
+            <Link
               key={link.href}
-              onClick={() => handleNavClick(link.href)}
+              href={link.href}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick(link.href);
+              }}
               className={`font-heading font-bold text-3xl transition-all duration-300 ${
                 menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               } ${isActive(link.href) ? 'text-[#C9A84C]' : 'text-white hover:text-[#C9A84C]'}`}
               style={{ transitionDelay: `${i * 60}ms` }}
             >
               {link.label}
-            </button>
+            </Link>
           ))}
           <a
             href={WA_LINK}

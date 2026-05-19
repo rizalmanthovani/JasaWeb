@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
 import { PORTFOLIO_ITEMS } from '../data/portfolio';
 
 const WA_LINK = 'https://wa.me/6287836993805';
@@ -66,11 +67,12 @@ function PortfolioCard({ item, index }) {
 
         {/* Live Website Screenshot */}
         <div className="absolute inset-0 w-full h-full">
-          <img 
+          <Image 
             src={item.image} 
             alt={`Screenshot of ${item.title}`}
-            className="w-full h-full object-cover object-center opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-            loading="lazy"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover object-center opacity-80 group-hover:opacity-100 transition-opacity duration-500"
           />
           {/* Subtle gradient overlay to ensure text/icons remain readable */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[rgba(10,10,10,0.5)]" />

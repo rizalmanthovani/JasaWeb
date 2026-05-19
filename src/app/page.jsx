@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import { FAQ_ITEMS } from '../data/faq';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Services from '../components/Services';
@@ -28,32 +29,14 @@ export default function Home() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Berapa lama proses pembuatan website?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Proses pembuatan memakan waktu 3-7 hari kerja tergantung paket yang dipilih dan kelengkapan materi dari klien."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Apakah biaya perpanjangan tahunan mahal?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Tidak, biaya perpanjangan tahun berikutnya mulai dari Rp300.000 (sudah termasuk domain & hosting)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Apakah saya perlu menyiapkan domain & hosting?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Tidak perlu. Semua paket sudah ALL-IN termasuk Domain, Hosting, dan SSL."
-        }
+    "mainEntity": FAQ_ITEMS.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
       }
-    ]
+    }))
   };
 
   return (

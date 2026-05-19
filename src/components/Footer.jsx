@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 
 const WA_LINK = 'https://wa.me/6287836993805';
 
@@ -33,7 +34,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <div className="relative">
-                <img src="/logo.jpg" alt="Zal Digital Logo" className="w-10 h-10 object-cover rounded-md" />
+                <Image src="/logo.jpg" alt="Zal Digital Logo" width={40} height={40} className="w-10 h-10 object-cover rounded-md" />
               </div>
               <div>
                 <div className="font-heading font-bold text-white text-sm">Zal Digital</div>

@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 function useReveal(className = 'reveal') {
   const ref = useRef(null);
@@ -37,9 +38,11 @@ export default function About() {
               
               {/* Logo Container */}
               <div className="relative bg-[#1a1a1a] p-2 md:p-3 rounded-2xl border border-[rgba(255,255,255,0.05)] shadow-2xl transform transition-transform duration-500 hover:scale-105 animate-float">
-                <img 
+                <Image 
                   src="/logo.jpg" 
                   alt="Zal Digital Logo" 
+                  width={256}
+                  height={256}
                   className="w-48 md:w-64 h-auto max-h-[300px] object-contain rounded-xl"
                 />
               </div>
