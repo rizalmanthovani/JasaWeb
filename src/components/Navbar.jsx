@@ -62,15 +62,8 @@ export default function Navbar() {
             className="flex items-center gap-3 group"
           >
             <div className="relative">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                {/* Z Frame (outer) */}
-                <rect x="2" y="2" width="36" height="36" rx="6" stroke="#C9A84C" strokeWidth="2" fill="none"/>
-                {/* Z Letter */}
-                <path d="M10 12H30L10 28H30" stroke="#C9A84C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                {/* Inner Z */}
-                <path d="M15 17H25L15 23H25" stroke="#E8C96B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.7"/>
-              </svg>
-              <div className="absolute inset-0 rounded-md bg-gold/10 blur-md group-hover:blur-xl transition-all duration-300" />
+              <img src="/logo.jpg" alt="Zal Digital Logo" className="w-10 h-10 object-cover rounded-md" />
+              <div className="absolute inset-0 rounded-md bg-gold/10 blur-md group-hover:blur-xl transition-all duration-300 -z-10" />
             </div>
             <div className="leading-tight">
               <div className="font-heading font-bold text-white text-sm tracking-tight">Zal Digital</div>

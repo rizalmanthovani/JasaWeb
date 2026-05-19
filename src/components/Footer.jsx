@@ -31,11 +31,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
-                <rect x="2" y="2" width="36" height="36" rx="6" stroke="#C9A84C" strokeWidth="2" fill="none"/>
-                <path d="M10 12H30L10 28H30" stroke="#C9A84C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M15 17H25L15 23H25" stroke="#E8C96B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.7"/>
-              </svg>
+              <div className="relative">
+                <img src="/logo.jpg" alt="Zal Digital Logo" className="w-10 h-10 object-cover rounded-md" />
+              </div>
               <div>
                 <div className="font-heading font-bold text-white text-sm">Zal Digital</div>
                 <div className="font-heading font-light text-[#C9A84C] text-[10px] tracking-[0.2em] uppercase">Production</div>
