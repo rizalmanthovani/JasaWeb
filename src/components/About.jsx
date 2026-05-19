@@ -28,20 +28,18 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
-          {/* LEFT — Logo Mark */}
+          {/* LEFT — Logo */}
           <div ref={leftRef} className="flex items-center justify-center">
-            <div className="relative flex items-center justify-center">
-              {/* Outer glow rings */}
-              <div className="absolute w-64 h-64 rounded-full border border-[rgba(201,168,76,0.08)] animate-[spin_30s_linear_infinite]" />
-              <div className="absolute w-52 h-52 rounded-full border border-[rgba(201,168,76,0.12)] animate-[spin_20s_linear_infinite_reverse]" />
-              <div className="absolute w-40 h-40 rounded-full bg-[rgba(201,168,76,0.05)] blur-2xl" />
-
-              {/* Z Logo Mark */}
-              <div className="relative z-10 flex items-center justify-center">
+            <div className="relative group">
+              {/* Soft glow behind the logo */}
+              <div className="absolute inset-0 bg-[#C9A84C] opacity-20 blur-3xl rounded-full transition-opacity duration-500 group-hover:opacity-30" />
+              
+              {/* Logo Container */}
+              <div className="relative bg-[#1a1a1a] p-2 md:p-3 rounded-2xl border border-[rgba(255,255,255,0.05)] shadow-2xl transform transition-transform duration-500 hover:scale-105 animate-float">
                 <img 
                   src="/logo.jpg" 
                   alt="Zal Digital Logo" 
-                  className="w-44 h-44 object-cover rounded-full drop-shadow-[0_0_40px_rgba(201,168,76,0.4)] border-2 border-[rgba(201,168,76,0.2)]" 
+                  className="w-48 md:w-64 h-auto max-h-[300px] object-contain rounded-xl"
                 />
               </div>
             </div>
