@@ -37,22 +37,12 @@ export default function About() {
               <div className="absolute w-40 h-40 rounded-full bg-[rgba(201,168,76,0.05)] blur-2xl" />
 
               {/* Z Logo Mark */}
-              <div className="relative z-10">
-                <svg
-                  width="180"
-                  height="180"
-                  viewBox="0 0 180 180"
-                  fill="none"
-                  className="drop-shadow-[0_0_40px_rgba(201,168,76,0.5)]"
-                  style={{ animation: 'spin 25s linear infinite' }}
-                >
-                  {/* Outer Z frame */}
-                  <rect x="8" y="8" width="164" height="164" rx="24" stroke="#C9A84C" strokeWidth="3" fill="rgba(201,168,76,0.04)"/>
-                  {/* Big Z */}
-                  <path d="M45 55H135L45 125H135" stroke="#C9A84C" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
-                  {/* Inner accent Z */}
-                  <path d="M70 78H110L70 102H110" stroke="#E8C96B" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" opacity="0.5"/>
-                </svg>
+              <div className="relative z-10 flex items-center justify-center">
+                <img 
+                  src="/logo.jpg" 
+                  alt="Zal Digital Logo" 
+                  className="w-44 h-44 object-cover rounded-full drop-shadow-[0_0_40px_rgba(201,168,76,0.4)] border-2 border-[rgba(201,168,76,0.2)]" 
+                />
               </div>
             </div>
           </div>
