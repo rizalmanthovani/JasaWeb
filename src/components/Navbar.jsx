@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 
 const WA_LINK = 'https://wa.me/6287836993805';

@@ -18,8 +18,8 @@ export default {
         'text-muted': '#777777',
       },
       fontFamily: {
-        'heading': ['Montserrat', 'sans-serif'],
-        'body': ['Inter', 'sans-serif'],
+        'heading': ['var(--font-montserrat)', 'Montserrat', 'sans-serif'],
+        'body': ['var(--font-inter)', 'Inter', 'sans-serif'],
       },
       borderRadius: {
         'sm': '6px',
