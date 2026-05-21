@@ -75,7 +75,7 @@ export const PORTFOLIO_ITEMS = [
     accentColor: '#3EC97B',
     icon: '🏥',
     stats: '7 hari',
-    link: 'https://demo.zaldigital.com/klinik-sehat',
-    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600&auto=format&fit=crop',
+    link: 'https://klinikdutabangsa.vercel.app/',
+    image: 'https://image.thum.io/get/width/600/crop/800/https://klinikdutabangsa.vercel.app/',
   },
 ];
