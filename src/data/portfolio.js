@@ -67,7 +67,7 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: 6,
-    title: 'Klinik Sehat Prima',
+    title: 'Klinik Duta Bangsa',
     niche: 'Klinik',
     desc: 'Website klinik profesional dengan profil dokter dan sistem pendaftaran online.',
     tags: ['Profil Dokter', 'Pendaftaran Online'],
