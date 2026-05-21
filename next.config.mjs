@@ -11,6 +11,7 @@ const nextConfig = {
         hostname: 'image.thum.io',
       },
     ],
+    unoptimized: true,
   },
 };
 
