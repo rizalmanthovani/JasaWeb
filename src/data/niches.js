@@ -8,7 +8,7 @@ export const NICHES = [
     cardBg: '#1e1408',
     card1Desc: 'Cocok untuk bisnis yang baru ingin hadir di internet dengan tampilan profesional.',
     card2Desc: 'Website lengkap dengan fitur booking, menu/layanan, galeri, dan SEO lokal untuk meningkatkan pelanggan.',
-    card3Desc: 'Butuh fitur khusus? Integrasi sistem, multi-halaman, atau desain unik sesuai brand kamu.',
+    card3Desc: 'Butuh fitur khusus? Integrasi sistem, multi-halaman, atau desain unik sesuai identitas brand Anda.',
   },
   {
     id: 'barbershop',

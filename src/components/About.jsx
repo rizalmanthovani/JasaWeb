@@ -55,7 +55,7 @@ export default function About() {
 
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-white leading-tight">
               Kami bukan sekadar{' '}
-              <span className="text-[#C9A84C]">bikin website.</span>
+              <span className="text-[#C9A84C]">membangun website.</span>
             </h2>
 
             <p className="font-body text-[#BBBBBB] text-base leading-relaxed">
@@ -65,7 +65,7 @@ export default function About() {
 
             <p className="font-body text-[#BBBBBB] text-base leading-relaxed">
               Kami fokus pada satu hal: membuat website yang benar-benar{' '}
-              <span className="text-white font-medium">bekerja untuk bisnis kamu</span> — bukan sekadar ada, tapi
+              <span className="text-white font-medium">bekerja untuk bisnis Anda</span> — bukan sekadar ada, tapi
               bisa menarik pelanggan, membangun kepercayaan, dan menghasilkan.
             </p>
 

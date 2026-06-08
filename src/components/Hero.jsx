@@ -150,7 +150,7 @@ export default function Hero() {
           className="font-body text-base md:text-lg text-[#BBBBBB] max-w-xl mx-auto mb-10 leading-relaxed animate-fade-in"
           style={{ animationDelay: '0.6s', animationFillMode: 'both' }}
         >
-          Kami bantu bisnis anda tampil profesional, mudah ditemukan, dan siap menerima pelanggan —{' '}
+          Kami bantu bisnis Anda tampil profesional, mudah ditemukan, dan siap menerima pelanggan —{' '}
           <span className="text-white">tanpa ribet, tanpa mahal.</span>
         </p>
 

@@ -30,12 +30,12 @@ export default function Contact() {
         <span className="badge-gold mb-6 inline-block">KONTAK</span>
 
         <h2 className="font-heading font-black text-4xl md:text-6xl text-white mb-6 leading-tight">
-          Siap Buat Website<br/>
-          <span className="text-[#C9A84C]">Bisnis Kamu?</span>
+          Siap Membangun Website<br/>
+          <span className="text-[#C9A84C]">Bisnis Anda?</span>
         </h2>
 
         <p className="font-body text-[#BBBBBB] text-base md:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-          Konsultasi <span className="text-white font-medium">100% gratis</span>. Ceritakan bisnis kamu dan kami bantu tentukan website terbaik yang sesuai kebutuhan dan budget.
+          Konsultasi <span className="text-white font-medium">100% gratis</span>. Ceritakan bisnis Anda dan kami bantu tentukan solusi website terbaik yang sesuai kebutuhan dan budget.
         </p>
 
         {/* Main CTA */}
