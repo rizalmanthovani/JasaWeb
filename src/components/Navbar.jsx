@@ -2,51 +2,34 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const WA_LINK = 'https://wa.me/6287836993805';
 
 const NAV_LINKS = [
-  { label: 'Layanan', href: '#layanan' },
-  { label: 'Portofolio', href: '#portofolio' },
-  { label: 'Proses', href: '#proses' },
-  { label: 'Testimoni', href: '#testimoni' },
-  { label: 'Kontak', href: '#kontak' },
+  { label: 'Beranda', href: '/' },
+  { label: 'Tentang', href: '/about' },
+  { label: 'Layanan', href: '/services' },
+  { label: 'Portofolio', href: '/portfolio' },
+  { label: 'Kontak', href: '/contact' },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 80);
-
-      // Active section detection
-      const sections = ['home', 'tentang', 'layanan', 'portofolio', 'proses', 'testimoni', 'faq', 'kontak'];
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i]);
-        if (el && window.scrollY >= el.offsetTop - 120) {
-          setActiveSection(sections[i]);
-          break;
-        }
-      }
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (href) => {
-    setMenuOpen(false);
-    const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const isActive = (href) => {
-    const id = href.replace('#', '');
-    return activeSection === id;
+    if (href === '/') return pathname === '/';
+    return pathname.startsWith(href);
   };
 
   return (
@@ -61,11 +44,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link
-            href="#home"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick('#home');
-            }}
+            href="/"
             className="flex items-center gap-3 group"
           >
             <div className="relative">
@@ -84,10 +63,6 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(link.href);
-                }}
                 className={`nav-link font-body text-sm font-medium transition-colors duration-300 ${
                   isActive(link.href)
                     ? 'text-[#C9A84C] active'
@@ -133,7 +108,6 @@ export default function Navbar() {
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        {/* Gold corner accents */}
         <div className="absolute top-0 left-0 w-24 h-24 border-l-2 border-t-2 border-[#C9A84C]/30" />
         <div className="absolute bottom-0 right-0 w-24 h-24 border-r-2 border-b-2 border-[#C9A84C]/30" />
 
@@ -142,10 +116,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(link.href);
-              }}
+              onClick={() => setMenuOpen(false)}
               className={`font-heading font-bold text-3xl transition-all duration-300 ${
                 menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               } ${isActive(link.href) ? 'text-[#C9A84C]' : 'text-white hover:text-[#C9A84C]'}`}
