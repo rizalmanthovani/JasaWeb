@@ -11,23 +11,23 @@ export default function TrustBanner() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-x divide-[rgba(255,255,255,0.05)] text-center">
           
           <div className="flex flex-col items-center">
-            <span className="font-heading font-black text-3xl md:text-5xl text-white mb-2">10+</span>
-            <span className="font-body text-xs md:text-sm text-[#888888] uppercase tracking-wider">Tahun Pengalaman</span>
+            <span className="font-heading font-black text-3xl md:text-5xl text-[#D4AF37] mb-2">⚡</span>
+            <span className="font-body text-xs md:text-sm text-[#888888] uppercase tracking-wider">Desain Modern<br/>& Responsif</span>
           </div>
 
           <div className="flex flex-col items-center">
-            <span className="font-heading font-black text-3xl md:text-5xl text-white mb-2">50+</span>
-            <span className="font-body text-xs md:text-sm text-[#888888] uppercase tracking-wider">Klien B2B Sukses</span>
+            <span className="font-heading font-black text-3xl md:text-5xl text-[#D4AF37] mb-2">🎯</span>
+            <span className="font-body text-xs md:text-sm text-[#888888] uppercase tracking-wider">Fokus Niche<br/>B2B Lokal</span>
           </div>
 
           <div className="flex flex-col items-center">
-            <span className="font-heading font-black text-3xl md:text-5xl text-white mb-2">3 Hari</span>
-            <span className="font-body text-xs md:text-sm text-[#888888] uppercase tracking-wider">Rata-Rata Selesai</span>
+            <span className="font-heading font-black text-3xl md:text-5xl text-white mb-2">3-7</span>
+            <span className="font-body text-xs md:text-sm text-[#888888] uppercase tracking-wider">Hari Rata-Rata<br/>Pengerjaan</span>
           </div>
 
           <div className="flex flex-col items-center">
-            <span className="font-heading font-black text-3xl md:text-5xl text-white mb-2">100%</span>
-            <span className="font-body text-xs md:text-sm text-[#888888] uppercase tracking-wider">Garansi Kepuasan</span>
+            <span className="font-heading font-black text-3xl md:text-5xl text-[#D4AF37] mb-2">🤝</span>
+            <span className="font-body text-xs md:text-sm text-[#888888] uppercase tracking-wider">Support &<br/>Konsultasi Aktif</span>
           </div>
 
         </div>

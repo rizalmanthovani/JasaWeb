@@ -63,18 +63,18 @@ export default function HeroHub() {
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto pt-24 pb-16">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(212,175,55,0.3)] bg-[rgba(212,175,55,0.05)] backdrop-blur-md mb-8 animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
           <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
-          <span className="text-[10px] md:text-xs font-heading font-semibold tracking-widest text-[#D4AF37] uppercase">Premium Web Agency</span>
+          <span className="text-[10px] md:text-xs font-heading font-semibold tracking-widest text-[#D4AF37] uppercase">Spesialis Website Bisnis Lokal</span>
         </div>
 
         <h1 className="font-heading font-black text-5xl md:text-7xl lg:text-8xl leading-[1.1] mb-6 tracking-tight animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
-          <span className="text-white block">Transformasi Digital</span>
+          <span className="text-white block">Website Profesional</span>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#D4AF37] block">
-            Kelas Atas.
+            yang Menghasilkan.
           </span>
         </h1>
 
         <p className="font-body text-base md:text-xl text-[#A0A0A0] max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
-          Kami membangun aset digital eksklusif untuk Barbershop, Cafe, dan Klinik yang siap memimpin pasar.
+          Kami membantu Barbershop, Cafe, dan Klinik memiliki website modern yang rapi, cepat, dan siap mendatangkan pelanggan baru.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-5 animate-fade-in" style={{ animationDelay: '0.8s', animationFillMode: 'both' }}>
