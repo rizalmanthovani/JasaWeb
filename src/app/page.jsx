@@ -1,11 +1,16 @@
 import Navbar from '../components/Navbar';
-import { FAQ_ITEMS } from '../data/faq';
-import Hero from '../components/Hero';
-import Services from '../components/Services';
-import Portfolio from '../components/Portfolio';
-import Testimonials from '../components/Testimonials';
+import HeroHub from '../components/HeroHub';
+import TrustBanner from '../components/TrustBanner';
+import NicheBento from '../components/NicheBento';
+import FeaturedPortfolio from '../components/FeaturedPortfolio';
+import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import FloatingWA from '../components/FloatingWA';
+
+export const metadata = {
+  title: 'Zal Digital Production | Transformasi Digital Kelas Atas',
+  description: 'Premium Web Agency spesialis Barbershop, Cafe, dan Klinik.',
+};
 
 export default function Home() {
   const localBusinessSchema = {
@@ -13,26 +18,13 @@ export default function Home() {
     "@type": "LocalBusiness",
     "name": "Zal Digital Production",
     "image": "https://zaldigitalproduction.my.id/logo.jpg",
-    "description": "Jasa pembuatan website profesional untuk UMKM, barbershop, cafe, dan bisnis lokal.",
-    "priceRange": "$$",
+    "description": "Premium Web Agency spesialis Barbershop, Cafe, dan Klinik.",
+    "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "ID"
     },
     "url": "https://zaldigitalproduction.my.id"
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": FAQ_ITEMS.map((item) => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
   };
 
   return (
@@ -41,18 +33,15 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       
-      <div className="min-h-screen" style={{ background: '#1e1e1e', color: '#fff' }}>
+      <div className="min-h-screen" style={{ background: '#0a0a0a', color: '#fff' }}>
         <Navbar />
         <main>
-          <Hero />
-          <Services />
-          <Portfolio />
-          <Testimonials />
+          <HeroHub />
+          <TrustBanner />
+          <NicheBento />
+          <FeaturedPortfolio />
+          <Contact />
         </main>
         <Footer />
         <FloatingWA />
